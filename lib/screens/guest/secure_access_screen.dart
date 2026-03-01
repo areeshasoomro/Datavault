@@ -10,7 +10,7 @@ class SecureAccessScreen extends StatefulWidget {
   const SecureAccessScreen({super.key, required this.fileId});
 
   @override
-  State<SecureAccessScreen> createState() => _SecureAccessScreenState();
+  State<SecureAccessScreen> createState() => _SecureAccessScreenState();    
 }
 
 class _SecureAccessScreenState extends State<SecureAccessScreen> {
@@ -53,6 +53,7 @@ class _SecureAccessScreenState extends State<SecureAccessScreen> {
       setState(() => _isLoading = false);
       return;
     }
+    
 
     if (file.isPasswordProtected && _passwordController.text != file.password) {
       await _firebaseService.logAccess(file.id, 'wrong_password');
