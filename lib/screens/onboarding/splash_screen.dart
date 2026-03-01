@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 /**
  * SplashScreen
- * The entry point UI of the application. 
+ * This is the entry point of ui of application. 
  * Establishes the premium, security-focused brand identity using minimalist dark design.
  */
 class SplashScreen extends StatelessWidget {
@@ -98,7 +98,7 @@ class SplashScreen extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  // 4. Primary CTA
+                  // 4. Primary call to action
                   // Directs the user to the Authentication flow
                   ElevatedButton(
                     onPressed: () {
@@ -119,7 +119,7 @@ class SplashScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 24),
-                  // 5. System Status Indicator
+                  // 5. System indicator
                   // Cosmetic element to enhance the 'Live System' cybersecurity feel
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
