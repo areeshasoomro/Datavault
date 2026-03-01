@@ -1,7 +1,7 @@
-# 🛡️ DataVault — Secure File Sharing & Access Analytics
+# 🛡️ DataVault — Secure File Sharing & Access Analytics Application 
 
 
-DataVault is a professional-grade cybersecurity asset management platform designed to solve the critical problem of "static link leakage." Unlike traditional cloud sharing where links remain active forever with zero oversight, DataVault provides a **Zero-Trust** ecosystem for sharing sensitive information with real-time monitoring and active revocation.
+DataVault is a professional-grade cybersecurity asset management platform designed to solve the critical problem of "static link leakage." Unlike traditional cloud sharing where links remain active forever with zero oversight(No tracking ), DataVault provides a **Zero-Trust** ecosystem for sharing sensitive information with real-time monitoring and active revocation.
 
 ---
 
@@ -12,14 +12,14 @@ In modern digital workflows, sensitive documents (PDFs, credentials, reports) ar
 3. **No Audit Trail**: Owners have no idea if their file was viewed once, ten times, or by unauthorized parties.
 
 ---
-
+Solution
 ## 🚀 The DataVault Approach (Our Differentiator)
 We didn't just build a file uploader; we built a **Secure Delivery Pipeline**.
 
 ### 1. The Gatekeeper Architecture
 We implemented a decoupled system:
 *   **Android Management App**: A high-security vault for owners to upload, set rules, and monitor live traffic.
-*   **Web Secure Portal**: A dedicated "Clean Room" where guests must pass security checks (passwords, expiry, limits) before the source file is ever exposed.
+*   **Web Secure Portal**: A dedicated "Clean Room" where guests must pass security checks (passwords, expiry, limits) before the source file is ever exposed , we implemented 3 tier validation.
 
 ### 2. Multi-Layer Validation
 Every access attempt goes through a real-time validation sequence:
@@ -56,8 +56,6 @@ Owners can see a **Live Feed** of access attempts. If suspicious activity is det
     *   *Solution*: We pivoted to a **Cloudinary REST API** integration, allowing for real-world file hosting on the free tier without compromising security.
 *   **The Direct Link Leak**: Direct storage links can be easily scraped.
     *   *Solution*: We implemented the **Portal Pattern**. The guest only sees the file *after* our backend increments the view counter and validates the session.
-*   **Web CORS Restrictions**: Browsers block direct uploads to external APIs.
-    *   *Solution*: We built a **Platform-Adaptive Service** that handles real uploads on Android and utilizes a secure simulation on Web for seamless demo presentations.
 
 ---
 
